@@ -1,0 +1,69 @@
+{% extends 'home/base.html' %} 
+
+{% block title %}Services{% endblock %} 
+
+{% block content %}
+
+{% load static %}
+
+<section class="services" id="services">
+  <h1 class="heading">our <span>services</span></h1>
+
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-car"></i>
+      <h3>car selling</h3>
+      <p>
+        Khám phá Bộ sưu tập xe đẳng cấp của chúng tôi!
+      </p>
+      <a href={% url 'home:carselling' %} class="btn"> read more </a>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-tools"></i>
+      <h3>parts repair</h3>
+      <p>
+        Hướng dẫn Toàn diện về Sửa chữa Phụ tùng: Mọi thứ Bạn Cần Biết.
+      </p>
+      <a href={% url 'home:repair' %} class="btn"> read more</a>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-car-crash"></i>
+      <h3>car insurance</h3>
+      <p>
+        Bảo hiểm xe ô tô: Bảo vệ toàn diện cho chiếc xe của bạn
+      </p>
+      <a href={% url 'home:insurance' %} class="btn"> read more</a>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-car-battery"></i>
+      <h3>battery replacement</h3>
+      <p>
+        Thay pin: Bí quyết đổi mới năng lượng cho thiết bị của bạn
+      </p>
+      <a href={% url 'home:battery' %} class="btn"> read more</a>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-gas-pump"></i>
+      <h3>oil change</h3>
+      <p>  
+        Thay dầu động cơ: Bí quyết bảo vệ động cơ của bạn
+      </p>
+      <a href={% url 'home:oilchange' %} class="btn"> read more</a>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-headset"></i>
+      <h3>24/7 support</h3>
+      <p>
+        Hỗ trợ 24/7: Luôn luôn đồng hành cùng bạn mọi lúc, mọi nơi
+      </p>
+      <a href={% url 'home:support' %} class="btn"> read more</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'home/base.html' %} 
+
+{% block title %}Contact{% endblock %} 
+
+{% block content %}
+{% load static %}
+
+<section class="contact" id="contact">
+  <h1 class="heading"><span>contact</span> us</h1>
+
+  <div class="row">
+    <iframe
+      class="map"
+      src="https://maps.google.com/maps?q=Hồ Chí Minh&t=&z=10&ie=UTF8&iwloc=&output=embed"
+      frameborder="0"
+      scrolling="no"
+      marginheight="0"
+      marginwidth="0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+
+    <form action="" method="POST">
+      <h3>get in touch</h3>
+      {% csrf_token %}
+      {{cF.as_p}}
+      <input type="submit" value="Send message" class="btn" />
+    </form>
+  </div>
+</section>
+
+{% endblock %}
